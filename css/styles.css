@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&family=Big+Shoulders+Display:wght@600&family=Karla:wght@500&family=Kumbh+Sans:wght@500;600&family=Lexend:wght@500&family=Open+Sans:wght@600&family=Outfit:wght@400;500&family=Poppins:wght@500&family=Roboto:wght@500&family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+  --Softred: hsl(14, 88%, 65%);
+  --Softviolet: hsl(273, 75%, 66%);
+  --Softblue: hsl(240, 73%, 65%);
+  --Verydarkgrayishblue: hsl(237, 12%, 33%);
+  --Darkgrayishblue: hsl(240, 6%, 50%);
+  --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--Softviolet)), to(var(--Softblue)));
+  background: linear-gradient(to bottom, var(--Softviolet), var(--Softblue));
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Big Shoulders Display', cursive;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.faq--container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  background-color: var(--Lightgrayishblue);
+  border-radius: 10px;
+  max-width: 1200px;
+  height: 50vh;
+  padding: 2rem;
+}
+
+.faq--container .faq--content .faq--header h2 {
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.faq--container .faq--content button.accordion--question {
+  width: 100%;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #7e7e7e;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.faq--container .faq--content button.accordion--question::after {
+  font-family: FontAwesome;
+  content: '\f077';
+  color: var(--softred);
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+}
+
+.faq--container .faq--content button.accordion--question.is-open:after {
+  content: '\f078';
+  color: #000;
+}
+
+.faq--container .faq--content button.accordion--question:hover,
+.faq--container .faq--content button.accordion--question.is-open {
+  background-color: #ddd;
+}
+
+.faq--container .faq--content .accordion--answer {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 3px 0px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+}
